@@ -6,5 +6,5 @@
     "server": {
         "baseDir": "./src"
     },
-    "open": falses
+    "open": false
 }
