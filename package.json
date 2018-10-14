@@ -4,7 +4,7 @@
   "description": "Using Circleci to Run End to End Tests",
   "main": "index.js",
   "scripts": {
-    "start": "cd app && lite-server",
+    "dev": "cd app && lite-server",
     "test": "npx cypress run"
   },
   "keywords": [],
