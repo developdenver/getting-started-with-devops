@@ -14,6 +14,6 @@
     "cypress": "^2.1.0"
   },
   "dependencies": {
-    "lite-server": "^2.4.0"
+    "light-server": "^2.5.1"
   }
 }
