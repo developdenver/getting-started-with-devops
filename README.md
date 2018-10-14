@@ -1,9 +1,14 @@
-## Run a Cypress Test Automatically With CircleCi
+# Getting Started with DevOps
 
-## Learning Objectives
-- Understand Test Driven Development
-- Set Up CircleCi account
-- Connect CircleCi to a repo using Cypress
+Continuous Integration and Continuous Deployment is essential for companies that want their developers to be able to deploy code quickly, efficiently, and with minimal application downtime. 
+
+In this workshop, you will get a taste of what it takes to setup a CI/CD pipeline using CircleCI and Heroku. For the workshop, we will provide you with a working application with a functional test suite. 
+
+By the end of this workshop, participants will be able to:
+1. Manually run the application test suite
+1. Manually deploy the application to Heroku
+1. Configure CircleCI to run your test suite 
+1. Configure CircleCI to deploy your app to Heroku if all tests are passing. 
 
 ## Prereqs 
 
