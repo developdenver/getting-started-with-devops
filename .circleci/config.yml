@@ -23,8 +23,7 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - start_server:
-          - lite-server 
+      - run: npm start 
       - run:
           name: Running E2E tests with Cypress
           command: npm test
