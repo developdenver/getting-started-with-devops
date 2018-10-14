@@ -16,7 +16,7 @@ jobs:
             - cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm install
       # run verify and then save cache.
       # this ensures that the Cypress verified status is cached too
       - run: npm run cy:verify
