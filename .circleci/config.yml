@@ -1,38 +1,24 @@
-defaults: &defaults
-  working_directory: ~/app
-  docker:
-    - image: cypress/browsers:chrome67
-
 version: 2
 jobs:
   build:
-    <<: *defaults
+    docker:
+      - image: cypress/base:8
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
     steps:
       - checkout
-      # find compatible cache from previous build,
-      # it should have same dependencies installed from package.json checksum
       - restore_cache:
-          keys:
-            - cache-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}
+          key: v1-deps
       - run:
           name: Install Dependencies
-          command: npm install
-      # run verify and then save cache.
-      # this ensures that the Cypress verified status is cached too
-      - run: npm run cy:verify
-      # save new cache folder if needed
+          command: npm ci
       - save_cache:
-          key: cache-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.npm
             - ~/.cache
-      - run: npm run test
-      # all other test jobs will run AFTER this build job finishes
-      # to avoid reinstalling dependencies, we persist the source folder "app"
-      # and the Cypress binary to workspace, which is the fastest way
-      # for Circle jobs to pass files
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - app
-            - .cache/Cypress
+      - run: npm test
