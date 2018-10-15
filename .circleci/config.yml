@@ -2,20 +2,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: cypress/base:8
     steps:
       - checkout
-      - run: npm install
-      - run: npm run dev
+      - run:
+          command: |
+            echo Installing dependencies and starting server
+            npm install
+            npm run dev
   test:
-    docker:
-      - image: cypress/base:8
     steps:
       - checkout
       - run: npm test
 workflows:
   version: 2
-  build-and-deploy:
+  build-and-test:
     jobs:
       - build
       - test:
