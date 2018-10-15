@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "light-server -s app --port 3000",
-    "test": "npx cypress run"
+    "test": "$(npm bin)/cypress run"
   },
   "keywords": [],
   "author": "",
