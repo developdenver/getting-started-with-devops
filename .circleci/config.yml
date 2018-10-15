@@ -8,6 +8,8 @@ jobs:
       - run: npm install
       - run: npm run dev
   test:
+    requires:
+      - build
     docker:
       - image: cypress/base:8
     steps:
