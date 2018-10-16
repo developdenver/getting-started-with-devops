@@ -1,6 +1,6 @@
 describe('PHP Travels Local Server Test', () => {
   it('Tests the Landing Page of PHP Travels', () => {
-    cy.visit(Cypress.env('HOST') || 'index.html')
+    cy.visit("/")
     cy
       .get('header img')
       .should('have.attr', 'src', `./images/phptravels-logo.png`)
