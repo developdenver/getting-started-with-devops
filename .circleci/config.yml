@@ -30,7 +30,7 @@ jobs:
       - image: cypress/base:8
     steps:
       - attach_workspace:
-          at: /root/app
+          at: /tmp/workspace
       - run: npm test
 
 workflows:
