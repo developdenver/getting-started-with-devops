@@ -17,8 +17,8 @@ jobs:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - persist_to_workspace:
-          root: /root/app
+     - attach_workspace:
+          at: /tmp/workspace
           paths:
             - node_modules
             - cypress
@@ -29,8 +29,6 @@ jobs:
     docker:
       - image: cypress/base:8
     steps:
-      - attach_workspace:
-          at: /tmp/workspace
       - run: npm test
 
 workflows:
