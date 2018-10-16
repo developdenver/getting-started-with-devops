@@ -24,12 +24,14 @@ jobs:
             - cypress
             - cypress.json
             - index.html
-            
+
   test:
+    docker:
+      - image: cypress/base:8
     steps:
-        - attach_workspace:
+      - attach_workspace:
           at: /root/app
-        - run: npm test
+      - run: npm test
 
 workflows:
   version: 2
