@@ -16,8 +16,7 @@ jobs:
       - save_cache:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
-            - node_modules
-      - run: netstat -ntap            
+            - node_modules            
       - run: npm test
 
           
