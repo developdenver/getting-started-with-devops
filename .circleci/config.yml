@@ -17,6 +17,7 @@ jobs:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - run: sleep 60
       - run: npm test
 
           
