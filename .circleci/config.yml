@@ -11,12 +11,11 @@ jobs:
             - v1-npm-deps
       - run: 
            command: |
-          name: Install Dependencies 
+           name: Install Dependencies 
             npm install
-          name: Start Server
+           name: Start Server
             npm run dev
-          name: Run tests 
+           name: Run tests 
             npm test
-
 
 
