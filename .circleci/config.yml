@@ -5,17 +5,31 @@ jobs:
       - image: cypress/base:8
     steps:
       - checkout
-      - run:
-          command: |
-            echo Installing dependencies and starting server
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package.json" }}
+            - v1-npm-deps
+      - run: 
+           command: |
             npm install
-            npm run dev & 
+            npm run dev
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: /root/app
+          paths:
+            - node_modules
+            - cypress
+            - cypress.json
+            - index.html
+            
   test:
-    docker:
-      - image: cypress/base:8
     steps:
-      - checkout
-      - run: npm test
+        - attach_workspace:
+          at: /root/app
+        - run: npm test
 
 workflows:
   version: 2
