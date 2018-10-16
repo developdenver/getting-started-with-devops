@@ -17,8 +17,8 @@ jobs:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - attach_workspace:
-          at: /tmp/workspace
+      - persisti_workspace:
+          at: /project/workspace
           paths:
             - node_modules
             - cypress
