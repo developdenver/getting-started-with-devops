@@ -17,7 +17,7 @@ jobs:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
-     - attach_workspace:
+      - attach_workspace:
           at: /tmp/workspace
           paths:
             - node_modules
