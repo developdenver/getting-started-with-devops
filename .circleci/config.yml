@@ -9,7 +9,7 @@ jobs:
           command: |
             echo Installing dependencies and starting server
             npm install
-            npm run dev
+            npm run dev & 
   test:
     docker:
       - image: cypress/base:8
