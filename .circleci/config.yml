@@ -10,12 +10,11 @@ jobs:
             - v1-npm-deps-{{ checksum "package.json" }}
             - v1-npm-deps
       - run: 
-           command: |
            name: Install Dependencies 
-            npm install
+           command: npm install
            name: Start Server
-            npm run dev
+           command: npm run dev
            name: Run tests 
-            npm test
+           command: npm test
 
 
