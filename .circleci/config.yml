@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/stark-sierra-21087.git master
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$APP_NAME.git master
 
 workflows:
   version: 2
