@@ -1,0 +1,50 @@
+body {
+    padding: 1rem;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+.title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.dropdown-toggle {
+    min-width: 10rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+section {
+    background-color: #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+section li {
+    margin-bottom: 1rem;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}

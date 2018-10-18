@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>PHP TRAVELS | DEMO</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/phptravels-logo.png" alt="Logo">
+        <div class="title">
+            <nav class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    Menu <span class="caret">&nbsp;</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="demo.html">Demo</a>
+                    </li>
+                    <li>
+                        <a href="order.html">Order</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="nested" href="#">Product<span class="caret">&nbsp;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Technology</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h2>Application Test Drive.</h2>
+        </div>
+    </header>
+    <section>
+        <h3>Heading 1</h3>
+        <a href="/">Check out our services</a>
+    </section>
+    <section>
+        <h3>Heading 2</h3>
+        <a href="/">Read our user reviews</a>
+    </section>
+    <section>
+        <h3>FAQ</h3>
+        <ul>
+            <li>
+                <h4>Question 1</h4>
+                <p>Answer 1!</p>
+            </li>
+            <li>
+                <h4>Question 2</h4>
+                <p>Answer 2!</p>
+            </li>
+            <li>
+                <h4>Question 3</h4>
+                <p>Answer 3!</p>
+            </li>
+            <li>
+                <h4>Question 4</h4>
+                <p>Answer 4!</p>
+            </li>
+            <li>
+                <h4>Question 5</h4>
+                <p>Answer 5!</p>
+            </li>
+            <li>
+                <h4>Question 6</h4>
+                <p>Answer 6!</p>
+            </li>
+        </ul>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.nested').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>
