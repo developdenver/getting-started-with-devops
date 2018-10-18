@@ -15,11 +15,12 @@ By the end of this workshop, you will be able to:
 * A [heroku account](heroku.com)
 
 ## Steps to configure CircleCI to run your test suite
+1. Fork and clone this repo
 1. Sign up for CircleCI with your GitHub account
-2. Connect Desired Repo
-3. Create .circleci directory
-4. Create `config.yml` file in .cirecleci directory
-5. Configure files
+1. Connect Desired Repo
+1. Create .circleci directory
+1. Create `config.yml` file in .cirecleci directory
+1. Configure files
     - Copy and paste `config_template.yml`
     - Change docker image type to cypress/base:8
     - Add the commands you use locally 
