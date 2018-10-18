@@ -1,8 +1,7 @@
 version: 2
 jobs:
   build:
-    docker:
-    - image: cypress/base:8
+    # Add image here 
     steps:
     - checkout
     - restore_cache:
@@ -10,10 +9,7 @@ jobs:
         - v1-npm-deps-{{ checksum "package.json" }}
         - v1-npm-deps
     - run:
-        command: |
-          npm install
-          npm run dev
-          npm test
+        # Add commands here
     - save_cache:
         key: v1-npm-deps-{{ checksum "package.json" }}
         paths:
