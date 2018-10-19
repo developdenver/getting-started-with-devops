@@ -11,8 +11,8 @@ By the end of this workshop, you will be able to:
 1. (Stretch) Configure CircleCI to deploy your app to Heroku if all tests are passing
 
 ## Prerequisite
-* A [github account](github.com)
-* A [heroku account](heroku.com)
+* A github account
+* A heroku account
 
 ## Steps to configure CircleCI to run your test suite
 1. Fork and clone this repo
@@ -26,5 +26,9 @@ By the end of this workshop, you will be able to:
     - Add the commands you use locally 
     - Commit and push; check tests on CircleCI
 
+
+Workshop Video: [https://youtu.be/MKBn587MLQc]()
+Workshop Survey: [https://goo.gl/forms/2emR6jzk1d9l6xL42]() 
+    * Please take the survey if you do this workshop in person or on your own! 
 
 
